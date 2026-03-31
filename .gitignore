@@ -15,4 +15,4 @@ venv/
 .DS_Store
 
 # Local media downloads
-court-videos/
+data/videos/
