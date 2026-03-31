@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "openai-whisper>=20250625",
+#     "torch>=2.11.0",
+#     "typer>=0.24.1",
+# ]
+# ///
 from __future__ import annotations
 
 from pathlib import Path

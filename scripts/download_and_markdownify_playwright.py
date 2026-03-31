@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "markdownify>=1.2.2",
+#     "playwright>=1.58.0",
+#     "typer>=0.24.1",
+# ]
+# ///
 from __future__ import annotations
 
 import asyncio

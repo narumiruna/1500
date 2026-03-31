@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "markdownify>=1.2.2",
+#     "typer>=0.24.1",
+# ]
+# ///
 from __future__ import annotations
 
 import shutil

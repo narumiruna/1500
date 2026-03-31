@@ -2,17 +2,17 @@
 
 ## Download Court Videos
 
-Use the wrapper script:
+Use the Python script:
 
 ```bash
-scripts/download_court_videos.sh [URL_FILE] [OUTPUT_DIR] [WORKERS]
+uv run --script scripts/download_court_videos.py [OPTIONS]
 ```
 
 Defaults:
 
-- `URL_FILE`: `docs/court_video_urls.md`
-- `OUTPUT_DIR`: `data/videos`
-- `WORKERS`: `1`
+- `--url-file`: `docs/court_video_urls.md`
+- `--output-dir`: `data/videos`
+- `--workers`: `1`
 
 The URL file supports both:
 
@@ -22,21 +22,23 @@ The URL file supports both:
 ### Download Highest-Quality Video
 
 ```bash
-scripts/download_court_videos.sh
+uv run --script scripts/download_court_videos.py
 ```
 
 This uses `yt-dlp` format: `bestvideo*+bestaudio/best`.
 
-### Download Audio Only (MP3)
+### Download Audio Only (Original Format)
 
 Run the Python entrypoint with `--audio-only`:
 
 ```bash
-uv run python scripts/download_court_videos.py --audio-only [URL_FILE] [OUTPUT_DIR] [WORKERS]
+uv run --script scripts/download_court_videos.py --audio-only [OPTIONS]
 ```
+
+This uses `yt-dlp` format: `bestaudio` (no transcoding).
 
 Example:
 
 ```bash
-uv run python scripts/download_court_videos.py --audio-only docs/court_video_urls.md data/audio 1
+uv run --script scripts/download_court_videos.py --audio-only --url-file docs/court_video_urls.md --output-dir data/audio --workers 1
 ```

@@ -16,3 +16,5 @@ venv/
 
 # Local media downloads
 data/videos/
+
+tests/
