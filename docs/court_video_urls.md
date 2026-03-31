@@ -1,16 +1,19 @@
-https://www.youtube.com/watch?v=0KeURwJSR_Q
-https://www.youtube.com/watch?v=1NXVGenL8J8
-https://www.youtube.com/watch?v=7SD1Ue5QAiE
-https://www.youtube.com/watch?v=9JyOZ5CWGz4
-https://www.youtube.com/watch?v=CXKiBIamLC4
-https://www.youtube.com/watch?v=DS56afN36A8
-https://www.youtube.com/watch?v=HXqeVOdrDrs
-https://www.youtube.com/watch?v=IB49wmaJWtw
-https://www.youtube.com/watch?v=JaMUi1QUmbg
-https://www.youtube.com/watch?v=koSUntQfpmY
-https://www.youtube.com/watch?v=NDpqyQ8TlV0
-https://www.youtube.com/watch?v=NfrdKX5NBQc
-https://www.youtube.com/watch?v=Q2uHOiwtENo
-https://www.youtube.com/watch?v=sO8SNz7mXis
-https://www.youtube.com/watch?v=X9M3axM1LIU
-https://www.youtube.com/watch?v=xV6hqj2Ybds
+# 金訴字第51號相關法庭錄影網址
+
+- [113年度金訴字第51號宣判（115/03/26下午法庭錄影）](https://www.youtube.com/watch?v=1NXVGenL8J8)
+- [113年度金訴字第51號言詞辯論（114/12/15上午法庭錄影）](https://www.youtube.com/watch?v=CXKiBIamLC4)
+- [113年度金訴字第51號言詞辯論（114/12/15下午法庭錄影）](https://www.youtube.com/watch?v=0KeURwJSR_Q)
+- [113年度金訴字第51號言詞辯論（114/12/16上午法庭錄影）](https://www.youtube.com/watch?v=9JyOZ5CWGz4)
+- [113年度金訴字第51號言詞辯論（114/12/16下午法庭錄影）](https://www.youtube.com/watch?v=IB49wmaJWtw)
+- [113年度金訴字第51號言詞辯論（114/12/17上午法庭錄影）](https://www.youtube.com/watch?v=NDpqyQ8TlV0)
+- [113年度金訴字第51號言詞辯論（114/12/17下午法庭錄影）](https://www.youtube.com/watch?v=sO8SNz7mXis)
+- [113年度金訴字第51號言詞辯論（114/12/18上午法庭錄影）](https://www.youtube.com/watch?v=X9M3axM1LIU)
+- [113年度金訴字第51號言詞辯論（114/12/18下午法庭錄影）](https://www.youtube.com/watch?v=Q2uHOiwtENo)
+- [113年度金訴字第51號言詞辯論（114/12/19上午法庭錄影）](https://www.youtube.com/watch?v=NfrdKX5NBQc)
+- [113年度金訴字第51號言詞辯論（114/12/19下午法庭錄影）](https://www.youtube.com/watch?v=7SD1Ue5QAiE)
+- [113年度金訴字第51號言詞辯論（114/12/22上午法庭錄影）](https://www.youtube.com/watch?v=DS56afN36A8)
+- [113年度金訴字第51號言詞辯論（114/12/22下午法庭錄影）](https://www.youtube.com/watch?v=JaMUi1QUmbg)
+- [113年度金訴字第51號言詞辯論（114/12/22下午法庭錄影）](https://www.youtube.com/watch?v=JaMUi1QUmbg)
+- [113年度金訴字第51號言詞辯論（114/12/23下午法庭錄影）](https://www.youtube.com/watch?v=xV6hqj2Ybds)
+- [113年度金訴字第51號言詞辯論（114/12/24上午法庭錄影）](https://www.youtube.com/watch?v=koSUntQfpmY)
+- [113年度金訴字第51號言詞辯論（114/12/24下午法庭錄影）](https://www.youtube.com/watch?v=HXqeVOdrDrs)
