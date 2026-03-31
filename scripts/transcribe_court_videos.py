@@ -30,7 +30,7 @@ def main(
     output_dir: Annotated[
         Path,
         typer.Option("--output-dir", help="Directory to save transcripts."),
-    ] = Path("court-transcripts"),
+    ] = Path("docs/transcripts"),
     model_name: Annotated[
         str,
         typer.Option("--model", help="Whisper model name, e.g. large-v3/small/medium."),
