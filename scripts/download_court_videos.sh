@@ -3,7 +3,7 @@
 set -euo pipefail
 
 URL_FILE="${1:-docs/court_video_urls.md}"
-OUTPUT_DIR="${2:-court-videos}"
+OUTPUT_DIR="${2:-data/videos}"
 WORKERS="${3:-4}"
 
 if ! [[ "$WORKERS" =~ ^[1-9][0-9]*$ ]]; then

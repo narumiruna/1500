@@ -34,7 +34,7 @@ def main(
     model_name: Annotated[
         str,
         typer.Option("--model", help="Whisper model name, e.g. large-v3/small/medium."),
-    ] = "tiny",
+    ] = "large-v3",
     language: Annotated[
         str | None,
         typer.Option(
