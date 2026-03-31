@@ -8,6 +8,7 @@
 # ///
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Annotated
 
@@ -27,6 +28,12 @@ def find_video_files(input_dir: Path) -> list[Path]:
         if path.is_file() and path.suffix.lower() in VIDEO_EXTENSIONS
     ]
     return files
+
+
+def sanitize_transcript_basename(raw_name: str) -> str:
+    sanitized = re.sub(r"[^\w.-]+", "_", raw_name, flags=re.UNICODE)
+    sanitized = re.sub(r"_+", "_", sanitized).strip("_.")
+    return sanitized or "untitled"
 
 
 @app.command()
@@ -81,7 +88,8 @@ def main(
                 verbose=False,
             )
             text = (result.get("text") or "").strip()
-            transcript_path = model_output_dir / f"{video_path.stem}.txt"
+            transcript_name = sanitize_transcript_basename(video_path.stem)
+            transcript_path = model_output_dir / f"{transcript_name}.txt"
             transcript_path.write_text(text + "\n", encoding="utf-8")
         except Exception as exc:
             failed.append(video_path)

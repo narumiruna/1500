@@ -42,3 +42,23 @@ Example:
 ```bash
 uv run --script scripts/download_court_videos.py --audio-only --url-file docs/court_video_urls.md --output-dir data/audio --workers 1
 ```
+
+## Transcribe Court Videos
+
+Use the Python script:
+
+```bash
+uv run --script scripts/transcribe_court_videos.py [OPTIONS]
+```
+
+Defaults:
+
+- `--input-dir`: `data/videos`
+- `--output-dir`: `docs/transcripts`
+- `--model`: `large-v3`
+
+Output transcript filenames are normalized to avoid special characters:
+
+- Replace special characters (including `/`, `⧸`, and spaces) with `_`
+- Collapse repeated `_`
+- Trim leading/trailing `_` and `.`
