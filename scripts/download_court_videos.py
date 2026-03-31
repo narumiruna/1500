@@ -42,30 +42,52 @@ def load_urls(url_file: pathlib.Path) -> list[str]:
     return urls
 
 
-def download_one(url: str, output_dir: pathlib.Path) -> None:
-    subprocess.run(
-        [
-            "yt-dlp",
-            "-f",
-            "wv*+wa/w",
-            "--merge-output-format",
-            "mp4",
-            "--embed-metadata",
-            "-o",
-            f"{output_dir}/%(title)s.%(ext)s",
-            url,
-        ],
-        check=True,
-    )
+def download_one(
+    url: str, output_dir: pathlib.Path, *, audio_only: bool = False
+) -> None:
+    command = ["yt-dlp"]
+    if audio_only:
+        command.extend(
+            [
+                "-x",
+                "--audio-format",
+                "mp3",
+                "--audio-quality",
+                "0",
+                "-o",
+                f"{output_dir}/%(title)s.%(ext)s",
+                url,
+            ]
+        )
+    else:
+        command.extend(
+            [
+                "-f",
+                "bestvideo*+bestaudio/best",
+                "--merge-output-format",
+                "mp4",
+                "--embed-metadata",
+                "-o",
+                f"{output_dir}/%(title)s.%(ext)s",
+                url,
+            ]
+        )
+
+    subprocess.run(command, check=True)
 
 
 def parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Batch download court videos from URL file."
     )
+    parser.add_argument(
+        "--audio-only",
+        action="store_true",
+        help="Download audio only (mp3) instead of video.",
+    )
     parser.add_argument("url_file", nargs="?", default="docs/court_video_urls.md")
     parser.add_argument("output_dir", nargs="?", default="data/videos")
-    parser.add_argument("workers", nargs="?", default="4")
+    parser.add_argument("workers", nargs="?", default="1")
     return parser.parse_args(argv)
 
 
@@ -105,7 +127,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = [executor.submit(download_one, url, output_dir) for url in urls]
+        futures = [
+            executor.submit(download_one, url, output_dir, audio_only=args.audio_only)
+            for url in urls
+        ]
         for future in concurrent.futures.as_completed(futures):
             future.result()
 
