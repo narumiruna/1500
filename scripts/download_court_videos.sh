@@ -38,7 +38,7 @@ fi
 download_one() {
   local url="$1"
   yt-dlp \
-    -f "bv*+ba/b" \
+    -f "wv*+wa/w" \
     --merge-output-format mp4 \
     --embed-metadata \
     -o "$OUTPUT_DIR/%(title)s.%(ext)s" \
