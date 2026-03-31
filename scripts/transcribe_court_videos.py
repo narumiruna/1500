@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -8,7 +6,6 @@ from typing import Annotated
 import torch
 import typer
 import whisper
-
 
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".webm", ".mov", ".avi", ".m4v"}
 
@@ -36,8 +33,8 @@ def main(
     ] = Path("court-transcripts"),
     model_name: Annotated[
         str,
-        typer.Option("--model", help="Whisper model name, e.g. turbo/small/medium."),
-    ] = "turbo",
+        typer.Option("--model", help="Whisper model name, e.g. large-v3/small/medium."),
+    ] = "tiny",
     language: Annotated[
         str | None,
         typer.Option(
@@ -57,7 +54,8 @@ def main(
         typer.secho(f"No video files found in {input_dir}", fg="yellow")
         raise typer.Exit(code=0)
 
-    output_dir.mkdir(parents=True, exist_ok=True)
+    model_output_dir = output_dir / model_name.replace("/", "-")
+    model_output_dir.mkdir(parents=True, exist_ok=True)
 
     typer.echo(f"Loading Whisper model: {model_name}")
     model = whisper.load_model(model_name)
@@ -75,7 +73,7 @@ def main(
                 verbose=False,
             )
             text = (result.get("text") or "").strip()
-            transcript_path = output_dir / f"{video_path.stem}.txt"
+            transcript_path = model_output_dir / f"{video_path.stem}.txt"
             transcript_path.write_text(text + "\n", encoding="utf-8")
         except Exception as exc:
             failed.append(video_path)
@@ -87,7 +85,7 @@ def main(
             typer.echo(f"- {path}")
         raise typer.Exit(code=2)
 
-    typer.secho(f"\nDone. Transcripts saved to: {output_dir}", fg="green")
+    typer.secho(f"\nDone. Transcripts saved to: {model_output_dir}", fg="green")
 
 
 if __name__ == "__main__":
