@@ -62,3 +62,21 @@ Output transcript filenames are normalized to avoid special characters:
 - Replace special characters (including `/`, `⧸`, and spaces) with `_`
 - Collapse repeated `_`
 - Trim leading/trailing `_` and `.`
+
+## Check Oral Argument Page Consistency
+
+Use this script to verify that each oral-argument detail page:
+
+- Uses the unified date line format
+- Uses the unified video link format (`庭審錄影` + `rel="noopener noreferrer"`)
+- Contains a matching transcript link
+
+```bash
+uv run --script scripts/check_oral_arguments_consistency.py
+```
+
+Optional:
+
+```bash
+uv run --script scripts/check_oral_arguments_consistency.py --oral-arguments-dir oral-arguments
+```
