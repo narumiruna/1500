@@ -3,174 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>言詞辯論筆記 — 113 年度金訴字第 51 號</title>
+  <title>言詞辯論總覽 — 113 年度金訴字第 51 號</title>
+  <link rel="stylesheet" href="assets/site.css">
   <style>
-    :root {
-      --color-bg: #f8f9fa;
-      --color-surface: #ffffff;
-      --color-primary: #1a3a5c;
-      --color-accent: #2c6fbb;
-      --color-text: #333333;
-      --color-muted: #6c757d;
-      --color-border: #dee2e6;
-      --max-width: 860px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.8;
-    }
-
-    header {
-      background: var(--color-primary);
-      color: #fff;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    header h1 { font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; opacity: 0.85; max-width: var(--max-width); margin: 0 auto; }
-
-    nav.top-tabs {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1rem 1.5rem 0;
-      display: flex;
-      gap: 0.6rem;
-      align-items: center;
-    }
-
-    .tab-link {
-      display: inline-block;
-      padding: 0.45rem 0.9rem;
-      border: 1px solid var(--color-border);
-      border-radius: 999px;
-      background: var(--color-surface);
-      color: var(--color-primary);
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-    }
-
-    .tab-link:hover {
-      border-color: var(--color-accent);
-      color: var(--color-accent);
-      text-decoration: none;
-    }
-
-    .tab-link.active {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-      color: #fff;
-      pointer-events: none;
-    }
-
-    nav.breadcrumb {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1rem 1.5rem 0;
-      font-size: 0.9rem;
-    }
-
-    nav.breadcrumb a { color: var(--color-accent); text-decoration: none; }
-    nav.breadcrumb a:hover { text-decoration: underline; }
-
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1rem 1.5rem 4rem;
-    }
-
-    section {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    section h2 {
-      font-size: 1.4rem;
-      color: var(--color-primary);
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--color-accent);
-      padding-bottom: 0.4rem;
-    }
-
-    p { margin-bottom: 0.8rem; }
-    ul, ol { padding-left: 1.5rem; margin-bottom: 0.8rem; }
-    li { margin-bottom: 0.4rem; }
-    a { color: var(--color-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
     .session-card {
       display: block;
       background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 8px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 1rem;
-      text-decoration: none;
+      padding: 1rem 1.1rem;
+      margin-bottom: 0.7rem;
       color: var(--color-text);
-      transition: border-color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
     }
 
     .session-card:hover {
       border-color: var(--color-accent);
-      box-shadow: 0 2px 8px rgba(44, 111, 187, 0.15);
+      box-shadow: 0 2px 8px rgba(44, 111, 187, 0.14);
       text-decoration: none;
     }
 
     .session-card h3 {
-      font-size: 1.15rem;
       color: var(--color-primary);
-      margin-bottom: 0.3rem;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
     }
 
-    .session-card .session-meta {
-      font-size: 0.9rem;
+    .session-meta {
       color: var(--color-muted);
-      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
     }
 
     .session-card p {
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--color-muted);
-      font-size: 0.85rem;
-      padding: 1.5rem;
-      border-top: 1px solid var(--color-border);
-    }
-
-    footer a { color: var(--color-muted); }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
-      nav.top-tabs { padding-top: 0.8rem; gap: 0.4rem; flex-wrap: wrap; }
-      .tab-link { font-size: 0.9rem; padding: 0.4rem 0.75rem; }
-      section { padding: 1.2rem; }
-      .session-card { padding: 1rem 1.2rem; }
+      margin: 0;
+      font-size: 0.92rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>言詞辯論筆記</h1>
-  <p>臺灣臺北地方法院 113 年度金訴字第 51 號 — 言詞辯論庭期筆記整理</p>
+  <h1>言詞辯論總覽</h1>
+  <p>臺灣臺北地方法院 113 年度金訴字第 51 號 — 庭期導覽與重點筆記入口</p>
 </header>
 
 <nav class="top-tabs" aria-label="主要頁面">
-  <a class="tab-link" href="index.html">案件資料庫</a>
+  <a class="tab-link" href="index.html">首頁</a>
   <a class="tab-link active" href="oral-arguments.html" aria-current="page">言詞辯論</a>
+  <a class="tab-link" href="data-index.html">資料索引</a>
+  <a class="tab-link" href="about.html">關於</a>
 </nav>
 
 <nav class="breadcrumb">
@@ -178,171 +60,39 @@
 </nav>
 
 <main>
-
   <section>
-    <h2>說明</h2>
-    <p>
-      本頁彙整每次言詞辯論庭期的重點筆記。筆記內容參考法院公開庭審錄影之逐字稿（使用 OpenAI Whisper large-v3 模型轉錄），整理各方論述之重點摘要，供查閱參考。
-    </p>
-    <p>
-      言詞辯論自 114 年 12 月 15 日起至 114 年 12 月 24 日止，共計多日多場。以下為已完成筆記的場次：
-    </p>
+    <h2>頁面說明</h2>
+    <p>本頁為第 2 層導覽頁：統一列出各庭期，提供單場重點筆記入口。逐字稿與錄影清單請至 <a href="data-index.html">資料索引</a> 查看。</p>
   </section>
 
   <section>
-    <h2>庭期筆記</h2>
+    <h2>庭期列表</h2>
 
-    <a class="session-card" href="oral-arguments/114-12-15-am.html">
-      <h3>114/12/15 上午 — 檢察官論告（圖利罪）</h3>
-      <div class="session-meta">📅 114 年 12 月 15 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=CXKiBIamLC4" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        檢察官就圖利罪進行論告。涵蓋京華城案背景、土地容積率沿革、120,284 平方公尺樓地板面積爭議、北高行判決分析、方案 1-4 演變、法律保留原則、容積獎勵合法性分析、準用都更問題，以及柯文哲市長收受陳情書的歷程。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-15-pm.html">
-      <h3>114/12/15 下午 — 檢察官論告（圖利罪續 &amp; 收賄罪）</h3>
-      <div class="session-meta">📅 114 年 12 月 15 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=0KeURwJSR_Q" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        接續上午場。涵蓋都委會歷次審議過程（7754、7755、7783 次會議）、委員質疑與反對意見、應曉薇議員介入、彭振聲副市長角色衝突（球員兼裁判）、苗博雅議員質詢法律依據，以及收賄罪論證——工作簿帳冊的逐筆驗證分析。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-16-am.html">
-      <h3>114/12/16 上午 — 檢察官論告（工作部帳冊證據 &amp; 應曉薇案）</h3>
-      <div class="session-meta">📅 114 年 12 月 16 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=9JyOZ5CWGz4" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        檢察官詳述工作部帳冊的發現過程：113 年 8 月 30 日搜索當天下午即在柯文哲市長 A137 行動硬碟「2020/財務資料甲」資料夾中發現，並於當天晚上向柯文哲提示求證。同時開始說明應曉薇案。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-16-pm.html">
-      <h3>114/12/16 下午 — 檢察官論告（吳順明職務角色 &amp; 協會資金分析）</h3>
-      <div class="session-meta">📅 114 年 12 月 16 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=IB49wmaJWtw" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        檢察官論證吳順明實質上是應曉薇助理而非顧問，並分析神慶晶捐予三個協會（中華格鬥協會、積極協會、城市發展研究會）各 500 萬元的資金流向，證明款項流入應曉薇個人房貸、信用卡費及子女海外生活費。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-17-am.html">
-      <h3>114/12/17 上午 — 辯護人辯論（柯文哲方）</h3>
-      <div class="session-meta">📅 114 年 12 月 17 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=NDpqyQ8TlV0" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        柯文哲辯護人就便利貼及公文批示說明：「看不懂」係授權給專業幕僚處理，並非指示違法行為。論述都委會審議過程合法、送公展程序符合規定，以及科文哲市長全程尊重行政程序。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-17-pm.html">
-      <h3>114/12/17 下午 — 被告答辯（沈慶京方）</h3>
-      <div class="session-meta">📅 114 年 12 月 17 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=sO8SNz7mXis" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        沈慶京本人就京華城陳情與都市計畫爭議進行答辯，主張其陳情係為回復合法權益，否認行賄及圖利犯意。辯護人並就捐款公益性質、對價關係及證據取捨提出無罪主張。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-18-am.html">
-      <h3>114/12/18 上午 — 辯護人辯論（沈慶京方）</h3>
-      <div class="session-meta">📅 114 年 12 月 18 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=X9M3axM1LIU" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        沈慶京辯護人論述：訴訟中仍可提起行政陳情，兩者目的與功能不同可以並存；都發局將陳情送都委會審議具有法令依據（都市計畫法第 72 條）；本案細部計畫的容積獎勵項目合法。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-18-pm.html">
-      <h3>114/12/18 下午 — 辯護人辯論（張志成方 &amp; 其他被告）</h3>
-      <div class="session-meta">📅 114 年 12 月 18 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=Q2uHOiwtENo" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        張志成辯護人論述其職務僅限威京集團總部公司，與京華城公司平行而非從屬關係，捐款時不知悉款項性質。彭振聲親自陳述，以及其他被告辯護人就政治獻金相關論點展開辯論。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-19-am.html">
-      <h3>114/12/19 上午 — 檢察官論告（洪正珍、黃景茂、邵琇珮部分）</h3>
-      <div class="session-meta">📅 114 年 12 月 19 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=NfrdKX5NBQc" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        檢察官就公務員受壓力之決策脈絡、都委會與專案小組過程、以及相關被告在圖利罪構成要件中的角色進行論告，並就部分被告量刑及幫助犯爭點提出法律意見。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-19-pm.html">
-      <h3>114/12/19 下午 — 辯護人辯論（黃景茂方）</h3>
-      <div class="session-meta">📅 114 年 12 月 19 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=7SD1Ue5QAiE" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        黃景茂辯護人反駁前副市長林洲民及林欽榮的證詞，指其證言有嚴重誤導。論述黃景茂擔任都發局長期間依法行政，本案細部計畫符合相關法令，並無違法圖利。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-22-am.html">
-      <h3>114/12/22 上午 — 檢察官論告（目可公司 &amp; 政治獻金侵占）</h3>
-      <div class="session-meta">📅 114 年 12 月 22 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=DS56afN36A8" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        檢察官論述柯文哲掌控民眾黨、目可公司及台灣民主基金會等組織，以李文娟為名義負責人、李文宗為實際管理人，將政治獻金挪用於組織運作及個人用途，涉及公益侵占罪與背信罪。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-22-pm.html">
-      <h3>114/12/22 下午 — 辯護人辯論（李文宗方）</h3>
-      <div class="session-meta">📅 114 年 12 月 22 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=JaMUi1QUmbg" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        李文宗辯護人反駁危機集團 210 萬元捐款的共犯認定，論述幫助犯的成立要件，並就政治獻金所有權歸屬（候選人 vs 政黨）、公益侵占罪構成要件，以及李文宗對各項業務的實際知悉程度進行答辯。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-23-pm.html">
-      <h3>114/12/23 下午 — 被告答辯（柯文哲方：政治獻金與木可爭點）</h3>
-      <div class="session-meta">📅 114 年 12 月 23 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=xV6hqj2Ybds" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        柯文哲本人與辯護人就京華城案及政治獻金案進行事實與法律答辯，重點涉及是否有圖利指示、木可公司與相關金流定性、證據可信性與無罪推定原則。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-24-am.html">
-      <h3>114/12/24 上午 — 被告答辯（應曉薇方，續辯）</h3>
-      <div class="session-meta">📅 114 年 12 月 24 日 上午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=koSUntQfpmY" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        應曉薇本人及辯護人接續答辯，主張其行為屬民意代表一般陳情服務，並就協調會、便當會參與情形、捐款公益性質及政治獻金合法性，否認收賄與洗錢犯意。
-      </p>
-    </a>
-
-    <a class="session-card" href="oral-arguments/114-12-24-pm.html">
-      <h3>114/12/24 下午 — 辯護人辯論（應曉薇方）</h3>
-      <div class="session-meta">📅 114 年 12 月 24 日 下午 ｜ 🎥 <a href="https://www.youtube.com/watch?v=HXqeVOdrDrs" target="_blank" rel="noopener noreferrer">庭審錄影</a></div>
-      <p>
-        應曉薇辯護人論述：吳順明受威京集團旗下公司聘用係提供個人專業顧問服務，與應曉薇議員職務無關；五個協會收受神慶晶贊助款屬正常政治捐助，非違背職務對價；並就民意代表職務外私下請託是否構成「職務上行為」提出法律論述。
-      </p>
-    </a>
-
+    <a class="session-card" href="oral-arguments/114-12-15-am.html"><h3>114/12/15 上午</h3><div class="session-meta">檢察官論告（圖利罪）</div><p>京華城案背景、容積爭議與法律基礎論證。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-15-pm.html"><h3>114/12/15 下午</h3><div class="session-meta">檢察官論告（圖利罪續 &amp; 收賄罪）</div><p>續行論告並進入收賄罪證據分析。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-16-am.html"><h3>114/12/16 上午</h3><div class="session-meta">檢察官論告（工作簿帳冊證據 &amp; 應曉薇案）</div><p>工作簿帳冊來源與證據關聯說明。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-16-pm.html"><h3>114/12/16 下午</h3><div class="session-meta">檢察官論告（吳順明職務角色 &amp; 協會資金分析）</div><p>角色認定與資金流向主張。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-17-am.html"><h3>114/12/17 上午</h3><div class="session-meta">辯護人辯論（柯文哲方）</div><p>程序正當性與指示意義辯點。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-17-pm.html"><h3>114/12/17 下午</h3><div class="session-meta">被告答辯（沈慶京方）</div><p>權益回復、陳情合法性與無罪主張。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-18-am.html"><h3>114/12/18 上午</h3><div class="session-meta">辯護人辯論（沈慶京方）</div><p>行政陳情與審議程序法理。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-18-pm.html"><h3>114/12/18 下午</h3><div class="session-meta">辯護人辯論（張志成方 &amp; 其他被告）</div><p>職務範圍與政治獻金性質爭點。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-19-am.html"><h3>114/12/19 上午</h3><div class="session-meta">檢察官論告（洪正珍、黃景茂、邵琇珮部分）</div><p>公務員處境、都委會脈絡與幫助犯爭點。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-19-pm.html"><h3>114/12/19 下午</h3><div class="session-meta">辯護人辯論（黃景茂方）</div><p>證詞可信性與圖利構成反駁。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-22-am.html"><h3>114/12/22 上午</h3><div class="session-meta">檢察官論告（目可公司 &amp; 政治獻金侵占）</div><p>政治獻金與組織金流關聯主張。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-22-pm.html"><h3>114/12/22 下午</h3><div class="session-meta">辯護人辯論（李文宗方）</div><p>幫助犯時序與捐款法律性質答辯。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-23-pm.html"><h3>114/12/23 下午</h3><div class="session-meta">被告答辯（柯文哲方）</div><p>京華城與政治獻金案整體答辯。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-24-am.html"><h3>114/12/24 上午</h3><div class="session-meta">被告答辯（應曉薇方，續辯）</div><p>職務行為界線、對價關係與程序爭點。</p></a>
+    <a class="session-card" href="oral-arguments/114-12-24-pm.html"><h3>114/12/24 下午</h3><div class="session-meta">辯護人辯論（應曉薇方）</div><p>收賄、侵占與洗錢構成爭點答辯。</p></a>
   </section>
-
-  <section>
-    <h2>言詞辯論日程總覽</h2>
-    <p>以下為全部言詞辯論庭期。所有場次均已完成筆記並提供連結。</p>
-    <ul>
-      <li><a href="oral-arguments/114-12-15-am.html">114/12/15 上午</a> — 檢察官論告（圖利罪）✅</li>
-      <li><a href="oral-arguments/114-12-15-pm.html">114/12/15 下午</a> — 檢察官論告（圖利罪續 &amp; 收賄罪）✅</li>
-      <li><a href="oral-arguments/114-12-16-am.html">114/12/16 上午</a> — 檢察官論告（工作部帳冊證據 &amp; 應曉薇案）✅</li>
-      <li><a href="oral-arguments/114-12-16-pm.html">114/12/16 下午</a> — 檢察官論告（吳順明職務角色 &amp; 協會資金分析）✅</li>
-      <li><a href="oral-arguments/114-12-17-am.html">114/12/17 上午</a> — 辯護人辯論（柯文哲方）✅</li>
-      <li><a href="oral-arguments/114-12-17-pm.html">114/12/17 下午</a> — 被告答辯（沈慶京方）✅</li>
-      <li><a href="oral-arguments/114-12-18-am.html">114/12/18 上午</a> — 辯護人辯論（沈慶京方）✅</li>
-      <li><a href="oral-arguments/114-12-18-pm.html">114/12/18 下午</a> — 辯護人辯論（張志成方 &amp; 其他被告）✅</li>
-      <li><a href="oral-arguments/114-12-19-am.html">114/12/19 上午</a> — 檢察官論告（洪正珍、黃景茂、邵琇珮部分）✅</li>
-      <li><a href="oral-arguments/114-12-19-pm.html">114/12/19 下午</a> — 辯護人辯論（黃景茂方）✅</li>
-      <li><a href="oral-arguments/114-12-22-am.html">114/12/22 上午</a> — 檢察官論告（目可公司 &amp; 政治獻金侵占）✅</li>
-      <li><a href="oral-arguments/114-12-22-pm.html">114/12/22 下午</a> — 辯護人辯論（李文宗方）✅</li>
-      <li><a href="oral-arguments/114-12-23-pm.html">114/12/23 下午</a> — 被告答辯（柯文哲方：政治獻金與木可爭點）✅</li>
-      <li><a href="oral-arguments/114-12-24-am.html">114/12/24 上午</a> — 被告答辯（應曉薇方，續辯）✅</li>
-      <li><a href="oral-arguments/114-12-24-pm.html">114/12/24 下午</a> — 辯護人辯論（應曉薇方）✅</li>
-    </ul>
-  </section>
-
 </main>
 
 <footer>
   <p>
     <a href="index.html">首頁</a> ｜
+    <a href="oral-arguments.html">言詞辯論</a> ｜
+    <a href="data-index.html">資料索引</a> ｜
+    <a href="about.html">關於</a> ｜
     <a href="https://github.com/narumiruna/1500" target="_blank" rel="noopener noreferrer">narumiruna/1500</a>
-    — 臺北地方法院 113 年度金訴字第 51 號案件資料庫
   </p>
 </footer>
 
